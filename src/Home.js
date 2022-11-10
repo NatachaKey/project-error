@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { data } from "./data";
+import { dataJewelry } from "./data";
 import Buttons from "./Buttons";
 import Jewelry from "./Jewelry";
+import Cart from "./Components/Cart/Cart";
+
 
 function Home(){
-
-
-const [jewelry, setJewelry]= useState(data);
+const [jewelry, setJewelry]= useState(dataJewelry);
 
   const chosenJewelry = (searchTerm) =>{
-    const newJewelry = data.filter(element=>element.searchTerm === searchTerm);
+  const newJewelry = dataJewelry.filter(element=>element.searchTerm === searchTerm);
     setJewelry(newJewelry); 
   }
 
@@ -17,8 +17,10 @@ const [jewelry, setJewelry]= useState(data);
     <div className="cont">
       <h2 className="back">Envío gratuito para los pedidos superiores a 2000$</h2>
     </div>
+  <Cart jewelry={jewelry}/>
   <Buttons filteredJewelry={chosenJewelry}/>
-  <Jewelry password={jewelry}/>
+  <Jewelry jewelry={jewelry}/>
+
   
   </div>
   )

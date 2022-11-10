@@ -20,7 +20,7 @@ import pul5 from './pul5.png';
 import pul6 from './pul6.jpg';
 import pul7 from './pul7.png';
 
-export const data = [
+export const dataJewelry = [
 
     {
   

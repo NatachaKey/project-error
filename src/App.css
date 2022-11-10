@@ -31,8 +31,6 @@ body {
   background-color: #fff;
 }
 
-
-
 .cont {
   display: flex;
   justify-content: center;
@@ -72,12 +70,11 @@ button {
   margin: 15px;
   font-family: 'Roboto', sans-serif;
 }
-
-img{
-  border:rgb(230, 224, 224) 1px solid;
-  margin-top: 30px;
- 
+#icon{
+border: none;
+background-color: transparent;
 }
+
 .seeMore{
   border: none;
   background-color: #f5f5f5 ;
@@ -92,13 +89,30 @@ p{
 }
 .bigger:hover{
 transform: scale(1.1);
-margin-bottom: 10px;
-margin-top: 10px;
+margin: 10px;
+border: none;
+
 }
+.cta{
+  background-color: #2b2929;
+  padding: 8px;
+  color:#fff;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+}
+
 
 @media all and (max-width:500px){
   nav{
     font-size: 15px;
     font-weight: bold;
+  }
+  .products {
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .productCard{
+    width:auto;
   }
 }
